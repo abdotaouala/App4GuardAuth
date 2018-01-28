@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
   onLogin(){
     if(this.userLogin=="admin" && this.password=="admin"){
       this.userService.setUsserLoggedIn()
+      this.userService.setUsername(this.userLogin);
       this.router.navigate(["/dashboard"])
     }
   }

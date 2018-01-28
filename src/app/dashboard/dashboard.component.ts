@@ -8,7 +8,10 @@ import {UserService} from '../user.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private userService:UserService) { }
+  username:string;
+  constructor(private userService:UserService) {
+    this.username=userService.getUsername()
+  }
 
   ngOnInit() {
 

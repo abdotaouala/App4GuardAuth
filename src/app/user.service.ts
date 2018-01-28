@@ -14,4 +14,10 @@ export class UserService {
     return this.usserLoggedIn;
   }
 
+  setUsername(username){
+    this.username=username
+  }
+  getUsername(){
+    return this.username
+  }
 }
