@@ -12,12 +12,16 @@ import {AppRoutingModule} from './app-routing/app-routing.module';
 import {RouterModule, Routes} from '@angular/router';
 import {AuthGuard} from './auth.guard';
 import {FormsModule} from '@angular/forms';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes:Routes=[
   {path:'',component:LoginComponent},
   {path:'dashboard',
     canActivate:[AuthGuard],
-    component:DashboardComponent}
+    component:DashboardComponent},
+  {
+    path:'**',component:NotFoundComponent
+  }
 ]
 
 @NgModule({
@@ -26,7 +30,8 @@ const routes:Routes=[
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,RouterModule.forRoot(routes),FormsModule
