@@ -4,6 +4,7 @@ Authentication with Guard
 <ul>
   <li>Angular 4</li>
   <li>Guard</li>
+  <li>HttpInterceptor</li>
 </ul>
 
 ## Getting Started
